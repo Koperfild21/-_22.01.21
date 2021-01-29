@@ -1,0 +1,4 @@
+first_list = [10023, 123.123, True, None, 'Питон', [234, 5432], (1, 2, 1.2) ]
+
+for i, item in enumerate(first_list, 1):
+    print(f"{i}) {item} - {type(item)}")
