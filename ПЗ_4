@@ -1,0 +1,4 @@
+first_str = input('Пожалуйста введите строку состоящую из слов, между которыми должен быть пробел: ').split()
+
+for i, word in enumerate(first_str, 1):
+    print(f'{i}. {word[:10]}')
