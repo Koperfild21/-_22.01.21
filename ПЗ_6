@@ -1,0 +1,19 @@
+items = []
+features = {'Наименование товара': '', 'Цена': '', 'Кол-во': '', 'единица измерения': ''}
+analytics = {'Наименование товара': [], 'Цена': [], 'Кол-во': [], 'единица измерения': []}
+n = 0
+while True:
+    if input('Чтобы выйти из программы нажмите "Q", для продолжения нажмите "Enter": ').upper() == 'Q':
+        break
+    n += 1
+    features = features.copy()
+    for f in features:
+        pro = input(f'Введите значение "{f}": ')
+        features[f] = int(pro) if f == 'Цена' or f == 'Кол-во' else pro
+        analytics[f].append(features[f])
+    items.append((n, features))
+    print(f"\nПостроение товаров\n {items}")
+    print(f'\n Текущая аналитика по товарам: \n {"*" * 30}')
+    for key, value in analytics.items():
+        print(f'{key:>30}: {value}')
+    print("*" * 30)
